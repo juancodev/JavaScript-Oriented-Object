@@ -25,6 +25,67 @@ const student1 = {
 
 // Class
 
+// Course class
+
+class Course {
+  constructor({
+    name,
+    classes = [],
+    module = [],
+  }) {
+    this.name = name;
+    this.classes = classes;
+    this.module = module;
+  }
+}
+
+const courseFullStack = new Course({
+  name: "Course FullStack",
+  classes: [
+    classOne,
+  ],
+  module: [
+    moduleOne,
+  ]
+})
+
+// Classes class
+
+class Classes {
+  constructor({
+    name,
+    title,
+    description,
+  }) {
+    this.name = name;
+    this.title = title;
+    this.description = description;
+  }
+}
+
+const classOne = new Classes({
+  name: "Class 1",
+  title: "What is JavaScript?",
+  description: "JavaScript is a programming language that allows you to implement complex things on web pages."
+})
+
+// Module class
+
+class Module {
+  constructor({
+    name,
+    title,
+  }) {
+    this.name = name;
+    this.title = title;
+  }
+}
+
+const moduleOne = new Module({
+  name: "Module 1",
+  title: "First steps with JavaScript",
+})
+
 // create class of learning Paths
 
 class LearningPaths {
@@ -42,7 +103,7 @@ class LearningPaths {
 const webPath = new LearningPaths({
   name: "Frontend Developer",
   courses: [
-    "JavaScript Basic",
+    courseFullStack,
     "JavaScript Medium",
     "Responsive Design",
     "React.js",
